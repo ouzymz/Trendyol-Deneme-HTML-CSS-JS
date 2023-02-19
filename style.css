@@ -1,0 +1,602 @@
+@font-face {
+    font-family: source_sans_proregular;
+    src: url("assets/SourceSansPro-Regular.otf") format("opentype");
+}
+
+* {
+    font-family: source_sans_proregular;
+    font-weight: bold;
+    transition: all .3s ease;
+    /* gecisleri yumusatir hover gecisleri gibi dusun */
+    -webkit-transition: all .3 ease;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+.container {
+    margin: 0px auto;
+    width: 1200px;
+    padding: 10px;
+    font-size: 13px;
+
+}
+
+/*#region Header Bar*/
+.header-top {
+    display: flex;
+    justify-content: end;
+}
+
+.header-top-link {
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 15px;
+}
+
+.header-top-link:hover {
+    color: rgb(27, 27, 27);
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 64px;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    font-size: 14px;
+    color: #333;
+    background-color: #f3f3f3;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    padding: 10px 10px 10px 15px;
+    margin: 0;
+    width: 49.33%;
+    border: none;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.search-text {
+    border: none;
+    background-color: #f3f3f3;
+    width: 95%;
+    padding-right: 7px;
+}
+
+.search-text:focus {
+    outline: none;
+}
+
+.search-bar:hover {
+    border: 2px solid rgb(242, 122, 26);
+    background-color: #f3f3f3;
+}
+
+.fa-search {
+    color: rgb(242, 122, 26);
+}
+
+.icon {
+    padding-right: 7px;
+}
+
+.user-item:hover {
+    color: rgb(242, 122, 26);
+    transition: all .01s ease
+}
+
+.user-item span:nth-child(2) {
+    display: none;
+}
+
+
+.user-item:hover span:nth-child(2) {
+    display: inline;
+}
+
+.user-item:hover span:nth-child(1) {
+    display: none;
+}
+
+
+.user-item {
+    color: black;
+    text-decoration: none;
+
+}
+
+/*#endregion Header Bar*/
+
+/*#region Navigation Bar*/
+.nav-categories {
+    padding: 0px 10px;
+}
+
+.nav-categories .list-category {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+.list-category>li {
+    font-size: 12px;
+    justify-content: center;
+}
+
+.list-category>li>a {
+    padding: 7px 15px;
+}
+
+.list-category>li:hover {
+    color: rgb(242, 122, 26);
+
+}
+
+.list-category>li:hover>a:hover {
+    color: rgb(242, 122, 26);
+    border-bottom: solid rgb(242, 122, 26);
+}
+
+.list-category>li:hover>a:hover>.link-new {
+    background-color: rgb(242, 122, 26);
+
+}
+
+.list-category>li>a {
+    color: #333;
+    text-decoration: none;
+}
+
+.link-new {
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 4px;
+    border-radius: 2px;
+    border-color: red;
+    background-color: red;
+    color: white;
+}
+
+/*#endregion Navigation Bar*/
+
+/*#region Slider bar */
+.slider {
+
+    padding: 0 12.5px;
+    box-sizing: border-box;
+    height: fit-content;
+    margin-bottom: 25px;
+    display: flex;
+
+}
+
+/*#region Slider Bar Elements*/
+.item {
+    width: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+}
+
+.item img {
+    border: 2.5px solid #e6e6e6;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: block;
+    margin: 10px;
+    transition: all ease 0.s;
+    font-size: 13px;
+}
+
+.item:hover {
+    color: rgb(242, 122, 26);
+}
+
+.items:hover img {
+    color: rgb(242, 122, 26);
+    border-color: rgb(242, 122, 26);
+}
+
+/*#endregion Slider Bar Elements*/
+
+
+
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 68px;
+}
+
+.owl-prev span,
+.owl-next span {
+    color: #fff;
+    font-size: 200px;
+    position: absolute;
+    top: 35%;
+    cursor: pointer;
+}
+
+
+.owl-dots {
+    text-align: center;
+}
+
+.owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+    background: #869791;
+}
+
+
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 37%;
+    left: -3%;
+    right: -3%;
+    color: rgb(209, 218, 230);
+}
+
+.owl-nav:hover i:hover {
+    color: black;
+}
+
+.owl-prev.disabled {
+    display: none;
+
+}
+
+.owl-next {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 0%
+}
+
+/* sagdaki arrow space between yuzunden sola kayiyordu display none olduğunda sola kayıyordu o duzeltildi*/
+
+.owl-next.disabled {
+    display: none;
+}
+
+/*#endregion Slider Bar*/
+
+/*#region Banner Bar*/
+.banner-listing-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-listing-item {
+    width: 380px;
+    height: 56px;
+}
+
+.banner-listing-item > a > img{
+    width: 380px;
+    height: 56px;
+}
+/*#endregion Banner Bar*/
+
+
+
+/*#region Destek Bar*/
+
+.products-destek {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.products-destek>a {
+    border-color: white;
+    border-radius: 6px;
+}
+
+.product-destek {
+    width: 380px;
+    padding: 0px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    display: block;
+    font-size: 13px;
+}
+
+.image-container {
+    border: none;
+    border-bottom: none;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+    /* image size'i artsa bile container dısına cıkamaz*/
+}
+
+.image-container>img {
+    width: 100%;
+    height: 187px;
+    border: 0;
+    border-radius: 6px 6px 0px 0px;
+    vertical-align: middle;
+}
+
+.destek-summary {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    border: #1b1b1b;
+    border-radius: 0px 0px 6px 6px;
+    background-color: #1b1b1b;
+    color: #fff;
+    height: 38px;
+    padding: 0 17px;
+}
+
+.product-destek>a {
+    text-decoration: none;
+}
+
+.product-destek:hover>a>.destek-summary {
+    background-color: rgb(242, 122, 26);
+}
+
+.hover-text {
+    display: none;
+}
+
+.product-destek:hover>a>.destek-summary>.hover-text {
+    display: block;
+}
+
+.product-destek:hover>a>.image-container>img {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*#endregion Destek Bar*/
+
+/*#region Yildizli Urunler Slider Bar*/
+.slider-container-main {
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 5%);
+    background-color: #fffaf6;
+    border: 1px solid #f2e5da;
+}
+
+.slider2-Header {
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider2-Header>span {
+    border: 0;
+    font-size: 22px;
+    background: transparent;
+    font-family: 'source_sans_prosemibold', sans-serif;
+    color: #333;
+}
+
+.slider2-Header>a {
+    color: #333;
+    font-size: 14px;
+}
+
+.slider2-item {
+    width: 224px;
+    height: 375px;
+    margin: 1px 15px 1px 1px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 5%);
+    border: solid 1px #e6e6e6;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rightarrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftarrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftarrow:hover {
+    background-color: rgb(242, 122, 26);
+}
+
+.rightarrow:hover {
+    background-color: rgb(242, 122, 26);
+}
+
+.owl-two>.owl-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: -4%;
+    right: -3.5%;
+    color: rgb(209, 218, 230);
+}
+
+.slider2-item>a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.slider2-item>a>.image-container {
+    height: 65%;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider2-item>a>.image-container>img {
+    height: 65%;
+    width: 60%;
+    display: flex;
+    position: absolute;
+
+    left: 20%;
+
+}
+
+.stamp-container {
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.decription-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-description {
+    width: 92%;
+}
+
+.brand-name {
+    font-weight: 900;
+    color: rgb(0 0 0);
+
+    line-height: 18px;
+}
+
+.brand-des {
+    font-weight: 500;
+    color: rgb(0 0 0);
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    font-weight: 900;
+    color: rgb(242, 122, 26);
+}
+
+.name {
+    width: 175px;
+    /* aşağıdaki 3 satır textin belirlenen width disina cıkması durumunda 3 nokta olarak gorunmasını sagladı*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*#endregion Yildizli Urunler Slider Bar*/
+
+.container2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px auto;
+    color: #333;
+    width: 1200px;
+    border-top: 1px solid #d4d4d4;
+    padding: 10px;
+}
+
+.container3 {
+    color: #333;
+    padding: 30px 0;
+    border-top: 1px solid #d4d4d4;
+    display: flex;
+    justify-content: center;
+
+
+}
+.con3-element{
+    margin: 0px 70px;
+}
+
+.con3-element>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 30px;
+}
+
+.con3-element>ul>div {
+    padding: 0px 60px;
+}
+
+.con3-element>ul>div > li{
+    padding: 5px 0px;
+}
+
+.footer1{
+    text-align: CENTER;
+
+    color: white;
+    width: 100%;
+    height: 452px;
+    background-color: #000;
+}
+.footer2{
+    text-align: CENTER;
+    color:white;
+    width: 100%;
+    height: 40px;
+    background-color: #2d2d2d;
+}
